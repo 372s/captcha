@@ -1,0 +1,21 @@
+{
+    "name": "qous/captcha",
+    "description": "captcha",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "王强",
+            "email": "wq455133@163.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "qous\\captcha\\": "src"
+        }
+    }
+}
