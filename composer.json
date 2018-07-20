@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "qous\\captcha\\": "src"
+            "Qous\\Captcha\\": "src"
         }
     }
 }
