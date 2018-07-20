@@ -2,8 +2,6 @@
 
 namespace Qous\Captcha;
 
-define('FONT_PATH', dirname(__FILE__). './../fonts/');
-
 class Captcha
 {
     protected $img;
@@ -23,7 +21,7 @@ class Captcha
     protected $fonts = array();
     protected $font;
     protected $fontSize = 15;
-    protected $fontPath = FONT_PATH;
+    protected $fontPath;
 
     protected $dotted = 50;
     protected $angle = 15;
