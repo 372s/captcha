@@ -1,6 +1,6 @@
 <?php
 
-namespace qous\captcha;
+namespace Qous\Captcha;
 
 define('FONT_PATH', dirname(__FILE__). './../fonts/');
 
@@ -19,15 +19,8 @@ class Captcha
     protected $codeLength = 4;
     protected $code;
 
-    protected $fontColors = [];
-    protected $fonts = [
-        'ABeeZee_regular.ttf',
-        'Asap_700.ttf',
-        'Khand_500.ttf',
-        'Open_Sans_regular.ttf',
-        'Roboto_regular.ttf', 
-        'Ubuntu_regular.ttf'
-    ];
+    protected $fontColors = array();
+    protected $fonts = array();
     protected $font;
     protected $fontSize = 15;
     protected $fontPath = FONT_PATH;
@@ -43,8 +36,12 @@ class Captcha
         if ($height) $this->height = $height;
         if ($characters) $this->characters = $characters;
         $this->img = imagecreatetruecolor($this->width, $this->height);
+
+        // 字体路径
+        $this->fontPath = dirname(__FILE__). './../fonts/';
+        $this->fonts = glob($this->fontPath . '*.ttf');
         $font = array_rand($this->fonts, 1);
-        $this->font = FONT_PATH . $this->fonts[$font];
+        $this->font = $this->fonts[$font];
     }
 
     /**
